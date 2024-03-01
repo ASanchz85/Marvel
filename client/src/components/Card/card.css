@@ -1,0 +1,84 @@
+@import '../../styles/global.css';
+
+.card {
+  position: relative;
+  height: 21rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+  transition: 2s;
+  overflow: hidden;
+}
+
+.card .card__content h3 {
+  color: white;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  animation-name: slideOut;
+  animation-duration: 1.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.card:hover::before,
+.card:focus::before {
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+}
+
+@keyframes slideIn {
+  from {
+    top: -30%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    top: 0;
+  }
+  to {
+    top: -30%;
+  }
+}
+
+.card__img {
+  z-index: 5;
+}
+
+.card__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__content {
+  position: relative;
+  height: 5rem;
+  padding: 1rem;
+  display: flex;
+  color: var(--primary-color);
+  justify-content: space-between;
+  border-top: 5px solid red;
+}
+
+.card__content::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-width: 20px 20px 0px 0;
+  border-style: solid;
+  border-color: transparent #ffffff transparent transparent;
+}
