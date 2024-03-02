@@ -1,0 +1,18 @@
+
+.comics__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 55vh;
+}
+
+.comic__details {
+  width: 60%;
+  margin-top: 2.5rem;
+}
+
+.comic__details h2 {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}

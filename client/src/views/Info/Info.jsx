@@ -1,8 +1,11 @@
+import { Details } from '../../components'
 import './info.css'
 
 function Info () {
   return (
-    <div>Info</div>
+    <>
+      <Details />
+    </>
   )
 }
 

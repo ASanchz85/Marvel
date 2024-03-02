@@ -4,12 +4,12 @@ import './layout.css'
 
 function Layout () {
   return (
-    <>
+    <main>
       <Header />
-      <main className='container'>
+      <section className='container'>
         <Outlet />
-      </main>
-    </>
+      </section>
+    </main>
   )
 }
 

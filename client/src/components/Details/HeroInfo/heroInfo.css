@@ -1,0 +1,66 @@
+@import '../../../styles/global.css';
+
+.hero__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: max-content;
+  background-color: var(--secondary-color);
+}
+
+.hero__container::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-width: 25px 25px 0px 0;
+  border-style: solid;
+  border-color: transparent #ffffff transparent transparent;
+}
+
+.hero__details {
+  width: 60%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.hero__details--img img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+}
+
+.hero__details--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+.hero__details--title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hero__details--title h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.hero__details--description p {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.hero__details--title,
+.hero__details--description {
+  color: var(--primary-color);
+}

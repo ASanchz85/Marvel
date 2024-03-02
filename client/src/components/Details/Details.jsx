@@ -1,8 +1,12 @@
+import { HeroInfo, LinkedComics } from '../../components'
 import './details.css'
 
 function Details () {
   return (
-    <div>Details</div>
+    <>
+      <HeroInfo />
+      <LinkedComics />
+    </>
   )
 }
 
