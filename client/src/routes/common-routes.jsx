@@ -1,5 +1,5 @@
 import Layout from '../layout/Layout'
-import { Home, Info, Favourites } from '../views'
+import { Home, Info, Favourites } from '../pages'
 
 const commonRoutes = [
   {

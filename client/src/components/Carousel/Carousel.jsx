@@ -1,25 +1,11 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
+import { CarouselCard, ScrollBar } from '../../components'
+import { useScrollBarPercantaje } from '../../hooks/useScrollBarPercantaje'
 import './carousel.css'
 
 function Carousel ({ items }) {
   const carouselRef = useRef(null)
-  const [scrollPercentage, setScrollPercentage] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const carousel = carouselRef.current
-      const scrollWidth = carousel.scrollWidth - carousel.clientWidth
-      const percentage = (carousel.scrollLeft / scrollWidth) * 100
-      setScrollPercentage(percentage)
-    }
-
-    const carousel = carouselRef.current
-    carousel.addEventListener('scroll', handleScroll)
-
-    return () => {
-      carousel.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+  const scrollPercentage = useScrollBarPercantaje(carouselRef)
 
   return (
     <div className='carousel__container'>
@@ -27,46 +13,18 @@ function Carousel ({ items }) {
         ref={carouselRef}
         className='carousel'
       >
-        <img
-          className='carousel__item'
-          src='https://via.placeholder.com/150'
-          alt=''
-        />
-        <img
-          className='carousel__item'
-          src='https://via.placeholder.com/150'
-          alt=''
-        />
-        <img
-          className='carousel__item'
-          src='https://via.placeholder.com/150'
-          alt=''
-        />
-        <img
-          className='carousel__item'
-          src='https://via.placeholder.com/150'
-          alt=''
-        />
-        <img
-          className='carousel__item'
-          src='https://via.placeholder.com/150'
-          alt=''
-        />
-        <img
-          className='carousel__item'
-          src='https://via.placeholder.com/150'
-          alt=''
-        />
-        <img
-          className='carousel__item'
-          src='https://via.placeholder.com/150'
-          alt=''
-        />
-        <img
-          className='carousel__item'
-          src='https://via.placeholder.com/150'
-          alt=''
-        />
+        <CarouselCard />
+        <CarouselCard />
+        <CarouselCard />
+        <CarouselCard />
+        <CarouselCard />
+        <CarouselCard />
+        <CarouselCard />
+        <CarouselCard />
+        <CarouselCard />
+        <CarouselCard />
+        <CarouselCard />
+        <CarouselCard />
         {/* {items.map((item, index) => (
           <div
             key={index}
@@ -77,14 +35,6 @@ function Carousel ({ items }) {
         ))} */}
       </div>
       <ScrollBar percentage={scrollPercentage} />
-    </div>
-  )
-}
-
-const ScrollBar = ({ percentage }) => {
-  return (
-    <div className='scroll-bar-container'>
-      <div className='scroll-bar' style={{ width: `${percentage}%` }} />
     </div>
   )
 }

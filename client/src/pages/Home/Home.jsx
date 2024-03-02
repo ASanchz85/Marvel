@@ -4,9 +4,8 @@ import './home.css'
 function Home () {
   return (
     <>
-      <h2>Favourites</h2>
       <SearchingBar />
-      <section className='container__cardgrid'>
+      <section className='cardgrid__container'>
         <Card />
         <Card />
         <Card />

@@ -1,0 +1,20 @@
+.carousel__item {
+  flex: 0 0 auto;
+  height: 22rem;
+  width: 11.25rem;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.carousel__item--img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel__item--date {
+  font-size: 0.75rem;
+  font-weight: 300;
+}

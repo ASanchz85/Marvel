@@ -10,18 +10,18 @@
   background-color: var(--secondary-color);
 }
 
-.hero__container::before{
+.hero__container::before {
   content: '';
   position: absolute;
   right: 0;
   bottom: 0;
-  border-width: 25px 25px 0px 0;
+  border-width: 25px 25px 0 0;
   border-style: solid;
   border-color: transparent #ffffff transparent transparent;
 }
 
 .hero__details {
-  width: 60%;
+  width: 64%;
   height: max-content;
   display: flex;
   align-items: center;
@@ -30,8 +30,10 @@
 }
 
 .hero__details--img img {
-  width: 320px;
-  height: 320px;
+  margin: 0;
+  padding: 0;
+  width: 20rem;
+  height: 20rem;
   object-fit: cover;
 }
 
@@ -53,6 +55,13 @@
 .hero__details--title h1 {
   font-size: 2.5rem;
   text-transform: uppercase;
+}
+
+.hero__details--favourite {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  cursor: pointer;
 }
 
 .hero__details--description p {

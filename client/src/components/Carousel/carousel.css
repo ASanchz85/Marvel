@@ -8,40 +8,5 @@
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scrollbar-color: transparent transparent; /* Scrollbar color */
-  -webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
-}
-
-.carousel::-webkit-scrollbar {
-  height: 10px; /* Height of the scrollbar */
-  position: absolute;
-  bottom: 0;
-  width: calc(100% - 20px); /* Subtract 20px for the scrollbar padding */
-}
-
-.carousel::-webkit-scrollbar-track {
-  background: #ffc107; /* Track color */
-}
-
-.carousel::-webkit-scrollbar-thumb {
-  background-color: #4caf50; /* Thumb color */
-  border-radius: 5px; /* Rounded corners */
-}
-
-.carousel__item {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  margin-right: 10px; /* Adjust margin as needed */
-}
-
-.scroll-bar-container {
-  width: 100%;
-  height: 10px; /* Height of the scrollbar */
-  background-color: #ffc107; /* Track color */
-  margin-top: 30px;
-}
-
-.scroll-bar {
-  height: 100%;
-  background-color: #4caf50; /* Thumb color */
+  scrollbar-color: transparent transparent;
 }

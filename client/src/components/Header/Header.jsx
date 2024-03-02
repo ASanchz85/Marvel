@@ -1,3 +1,4 @@
+import { HeartFull } from '../../components'
 import './header.css'
 
 function Header () {
@@ -5,7 +6,7 @@ function Header () {
     <header className='header'>
       <img src='/Marvel logo.svg' alt='Marvel logo' />
       <div className='header__favourite'>
-        <img src='/State=Default.svg' alt='Favourite icon' />
+        <HeartFull />
         <span>3</span>
       </div>
     </header>

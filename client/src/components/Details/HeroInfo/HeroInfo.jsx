@@ -1,3 +1,4 @@
+import { HeartEmpty } from '../../../components'
 import './heroInfo.css'
 
 function HeroInfo () {
@@ -14,10 +15,7 @@ function HeroInfo () {
           <div className='hero__details--title'>
             <h1>Hero Name</h1>
             <div className='hero__details--favourite'>
-              <img
-                src='/State=Default.svg'
-                alt='Favourite icon'
-              />
+              <HeartEmpty />
             </div>
           </div>
           <div className='hero__details--description'>
