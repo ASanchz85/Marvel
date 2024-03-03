@@ -6,3 +6,9 @@
   gap: 1rem;
   padding: 0 2.5rem;
 }
+
+h2 {
+  padding: 0 2.5rem;
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+}

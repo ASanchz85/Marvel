@@ -7,7 +7,7 @@ function MarvelLogo () {
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
-      <g clip-path='url(#clip0_38_148)'>
+      <g clipPath='url(#clip0_38_148)'>
         <path
           d='M130 -0.00292969H0V51.9971H130V-0.00292969Z'
           fill='#EC1D24'

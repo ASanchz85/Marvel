@@ -9,7 +9,7 @@ function Header () {
         <MarvelLogo />
       </Link>
       <div className='header__favourite'>
-        <Link to='/favourites'>
+        <Link to='/favorites'>
           <HeartFull />
         </Link>
         <span>3</span>
