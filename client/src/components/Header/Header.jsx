@@ -1,12 +1,17 @@
-import { HeartFull } from '../../components'
+import { Link } from 'react-router-dom'
+import { HeartFull, MarvelLogo } from '../../components'
 import './header.css'
 
 function Header () {
   return (
     <header className='header'>
-      <img src='/Marvel logo.svg' alt='Marvel logo' />
+      <Link to='/'>
+        <MarvelLogo />
+      </Link>
       <div className='header__favourite'>
-        <HeartFull />
+        <Link to='/favourites'>
+          <HeartFull />
+        </Link>
         <span>3</span>
       </div>
     </header>

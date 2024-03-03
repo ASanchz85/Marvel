@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Card, SearchingBar } from '../../components'
 import './home.css'
 
@@ -6,7 +7,9 @@ function Home () {
     <>
       <SearchingBar />
       <section className='cardgrid__container'>
-        <Card />
+        <Link to='info/:id'>
+          <Card />
+        </Link>
         <Card />
         <Card />
         <Card />
