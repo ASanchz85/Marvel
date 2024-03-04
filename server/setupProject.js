@@ -6,6 +6,14 @@ const rl = readline.createInterface({
   output: process.stdout
 })
 
+console.log('Please enter the following values to create a .env file\n')
+console.log(
+  'Be careful with the port you choose, in order to set up the client correctly\n'
+)
+console.log(
+  'I highly recommend you a pattern like:  http://localhost:3000/api/characters/\n'
+)
+
 const promptValues = (values) => {
   return new Promise((resolve) => {
     const prompts = Object.keys(values).map((key) => {

@@ -6,6 +6,12 @@ const rl = readline.createInterface({
   output: process.stdout
 })
 
+console.log('Please enter the following values to create a .env file\n')
+console.log(
+  'In this case, it is hihgly recommended to use the following pattern:\n'
+)
+console.log('http://localhost:3000/api/characters/')
+
 const promptValues = (values) => {
   return new Promise((resolve) => {
     const prompts = Object.keys(values).map((key) => {
@@ -35,10 +41,7 @@ const saveToEnvFile = (values) => {
 }
 
 const valuesToPrompt = {
-  PORT: '',
-  CLIENT_URL: '',
-  MARVEL_API_PUBLIC_KEY: '',
-  MARVEL_API_PRIVATE_KEY: ''
+  VITE_REACT_APP_API_CHARACTER_URL: ''
 }
 
 promptValues(valuesToPrompt)
