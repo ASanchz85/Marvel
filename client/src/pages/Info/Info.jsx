@@ -1,5 +1,4 @@
 import { Details } from '../../components'
-import './info.css'
 
 function Info () {
   return (

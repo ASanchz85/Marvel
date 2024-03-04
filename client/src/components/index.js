@@ -11,6 +11,7 @@ import MarvelLogo from './logos/MarvelLogo/MarvelLogo'
 import HeartEmpty from './logos/HeartEmpty/HeartEmpty'
 import HeartFull from './logos/HeartFull/HeartFull'
 import MagnifyingLens from './logos/MagnifyingLens/MagnifyingLens'
+import LoadingBar from './LoadingBar/LoadingBar'
 
 export {
   Header,
@@ -25,5 +26,6 @@ export {
   MarvelLogo,
   HeartEmpty,
   HeartFull,
-  MagnifyingLens
+  MagnifyingLens,
+  LoadingBar
 }

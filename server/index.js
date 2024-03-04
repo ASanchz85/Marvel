@@ -11,13 +11,17 @@ const PORT = process.env.PORT || 4000
 app.use(morgan('dev'))
 app.use(
   cors({
-    origin: 'http://localhost:5173'
+    origin: process.env.CLIENT_URL
   })
 )
+
 app.use(express.json({ limit: '5mb' }))
-app.use('/api/characters', require('./routes/characters-route'))
-app.use('/api/characters/:id', require('./routes/characters-route'))
-app.use('/api/comics', require('./routes/comics-route'))
+
+import('./routes/characters-route.js').then((charactersRoute) => {
+  app.use('/api/characters', charactersRoute.default)
+  app.use('/api/characters/:id', charactersRoute.default)
+  app.use('/api/characters/search', charactersRoute.default)
+})
 
 app.listen(PORT, () => {
   console.log(`Server is running at port ${PORT}`)

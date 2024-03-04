@@ -1,25 +1,44 @@
 import { Link } from 'react-router-dom'
-import { Card, SearchingBar } from '../../components'
+import { Card, LoadingBar, SearchingBar } from '../../components'
+import { useSearchingContext } from '../../context/useSearchingContext'
+import { useFetch } from '../../hooks/useFetch'
 import './home.css'
 
-function Home ({ shownFavorites = false }) {
+const apiUrl = import.meta.env.VITE_REACT_APP_API_CHARACTER_URL
+
+function Home () {
+  const { search } = useSearchingContext()
+  let dataToDisplay
+
+  if (search) {
+    const { data: searchResult } = useFetch(`${apiUrl}search?q=${search}`)
+    dataToDisplay = searchResult?.data.results
+  } else {
+    const { data } = useFetch(`${apiUrl}`)
+    dataToDisplay = data?.data.results
+  }
+
+  if (!dataToDisplay) {
+    return (
+      <>
+        <LoadingBar />
+        <SearchingBar />
+      </>
+    )
+  }
+
   return (
     <>
-      {shownFavorites && <h2>Favorites</h2>}
-      <SearchingBar />
+      <SearchingBar results={dataToDisplay?.length} />
       <section className='cardgrid__container'>
-        <Link to='info/:id'>
-          <Card />
-        </Link>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {dataToDisplay?.map((item) => (
+          <Link
+            to={`/info/${item.id}`}
+            key={item.id}
+          >
+            <Card {...item} />
+          </Link>
+        ))}
       </section>
     </>
   )

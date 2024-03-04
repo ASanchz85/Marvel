@@ -3,7 +3,7 @@ import { CarouselCard, ScrollBar } from '../../components'
 import { useScrollBarPercantaje } from '../../hooks/useScrollBarPercantaje'
 import './carousel.css'
 
-function Carousel ({ items }) {
+function Carousel ({ comics }) {
   const carouselRef = useRef(null)
   const scrollPercentage = useScrollBarPercantaje(carouselRef)
 
@@ -13,28 +13,16 @@ function Carousel ({ items }) {
         ref={carouselRef}
         className='carousel'
       >
-        <CarouselCard />
-        <CarouselCard />
-        <CarouselCard />
-        <CarouselCard />
-        <CarouselCard />
-        <CarouselCard />
-        <CarouselCard />
-        <CarouselCard />
-        <CarouselCard />
-        <CarouselCard />
-        <CarouselCard />
-        <CarouselCard />
-        {/* {items.map((item, index) => (
-          <div
-            key={index}
-            className='carousel__item'
-          >
-            {item}
-          </div>
-        ))} */}
+        {comics
+          ?.sort((a, b) => a.date.localeCompare(b.date))
+          .map((item, index) => (
+            <CarouselCard
+              key={index}
+              {...item}
+            />
+          ))}
       </div>
-      <ScrollBar percentage={scrollPercentage} />
+      {comics?.length > 5 && <ScrollBar percentage={scrollPercentage} />}
     </div>
   )
 }

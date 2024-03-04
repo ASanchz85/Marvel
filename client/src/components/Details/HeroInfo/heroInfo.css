@@ -73,3 +73,45 @@
 .hero__details--description {
   color: var(--primary-color);
 }
+
+@media only screen and (max-width: 340px) {
+  .hero__details--img img {
+    max-width: 12rem;
+    max-height: 12rem;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero__details {
+    flex-direction: column;
+  }
+
+  .hero__details--info {
+    padding: 0 1rem;
+  }
+
+  .hero__details--img img {
+    max-width: 19rem;
+    max-height: 19rem;
+    object-fit: cover;
+  }
+
+  .hero__details--description {
+    padding-bottom: 2rem;
+  }
+
+  .hero__details--title h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .hero__details {
+    width: 95%;
+  }
+
+  .hero__details--title h1 {
+    font-size: 2.2rem;
+  }
+}

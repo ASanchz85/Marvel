@@ -1,9 +1,14 @@
 import { useState } from 'react'
-import { HeartEmpty } from '../../components'
+import { HeartEmpty, HeartFull } from '../../components'
+import { useFavoriteContext } from '../../context/useFavoriteContext'
 import './card.css'
 
-function Card () {
+function Card ({ id, name, thumbnail }) {
   const [slideOutAnimation, setSlideOutAnimation] = useState(false)
+  const [fillColor, setFillCetcolor] = useState('red')
+  const { favorites } = useFavoriteContext()
+
+  const isFavorite = favorites.some((favorite) => favorite.id === id)
 
   const handleSlideOut = () => {
     setSlideOutAnimation(true)
@@ -13,16 +18,31 @@ function Card () {
     <article
       className={`card ${slideOutAnimation ? 'card--slideOut' : ''}`}
       onMouseOver={handleSlideOut}
+      onMouseEnter={() => setFillCetcolor('white')}
+      onMouseLeave={() => setFillCetcolor('red')}
     >
       <div className='card__img'>
         <img
-          src='https://via.placeholder.com/150'
+          src={`${thumbnail.path}.${thumbnail.extension}`}
           alt='placeholder'
         />
       </div>
       <div className='card__content'>
-        <h4>Card Title</h4>
-        <HeartEmpty width='16' height='15' />
+        <h4>{name}</h4>
+        {isFavorite
+          ? (
+            <HeartFull
+              width='16'
+              height='15'
+              fill={fillColor}
+            />
+            )
+          : (
+            <HeartEmpty
+              width='16'
+              height='15'
+            />
+            )}
       </div>
     </article>
   )

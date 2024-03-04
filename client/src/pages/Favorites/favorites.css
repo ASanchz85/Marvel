@@ -1,0 +1,14 @@
+.cardgrid__container {
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11.7rem, 1fr));
+  align-content: start;
+  gap: 1rem;
+  padding: 0 2.5rem;
+}
+
+h2 {
+  padding: 0 2.5rem;
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+}

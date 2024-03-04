@@ -1,15 +1,15 @@
 import './carouselCard.css'
 
-function CarouselCard () {
+function CarouselCard ({ title, date, thumbnail }) {
   return (
     <div className='carousel__item'>
       <img
         className='carousel__item--img'
-        src='https://via.placeholder.com/150'
+        src={`${thumbnail.path}.${thumbnail.extension}`}
         alt=''
       />
-      <h5 className='carousel__item--title'>Title</h5>
-      <p className='carousel__item--date'>1964</p>
+      <h5 className='carousel__item--title'>{title}</h5>
+      <p className='carousel__item--date'>{date}</p>
     </div>
   )
 }

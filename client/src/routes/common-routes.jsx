@@ -1,5 +1,5 @@
 import Layout from '../layout/Layout'
-import { Home, Info } from '../pages'
+import { Favorites, Home, Info } from '../pages'
 
 const commonRoutes = [
   {
@@ -16,7 +16,7 @@ const commonRoutes = [
       },
       {
         path: '/favorites',
-        element: <Home shownFavorites />
+        element: <Favorites />
       }
     ]
   }

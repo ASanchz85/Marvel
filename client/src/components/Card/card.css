@@ -57,7 +57,7 @@
 }
 
 .card__img {
-  height: 11.375rem;
+  min-height: 11.375rem;
   z-index: 5;
 }
 
@@ -70,6 +70,7 @@
 .card__content {
   position: relative;
   height: 7rem;
+  max-height: 4rem;
   padding: 1rem;
   color: var(--primary-color);
   display: flex;
@@ -89,7 +90,8 @@
 }
 
 .card__content h4 {
+  flex: 1;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
 }
