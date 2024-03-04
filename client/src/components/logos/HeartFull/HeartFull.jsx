@@ -1,12 +1,15 @@
 function HeartFull ({ width = '24', height = '22', fill = '#EC1D24' }) {
   return (
     <svg
+      role='button'
+      className='HeartFull'
       width={width}
       height={height}
       viewBox='0 0 24 22'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
     >
+      <title>Heart Full</title>
       <path
         fillRule='evenodd'
         clipRule='evenodd'

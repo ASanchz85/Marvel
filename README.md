@@ -8,7 +8,7 @@ All the project in both sides, client and server, includes "standard" rules for 
 
 To control the global state, I have chosen in-built React hook useContext as it was demanded. Mainly for dealing with favorites options.
 
-In the front-end, apart from the usual React dependencies (React and React-DOM), I only added React-Router-DOM to ease user navigation. For tomorrow's deployments I injected an environment variable to the build script, with the purpose of changing from "browserRouter" to "hashRouter" and give the chance to the users of adding specific dynamic views to their bookmarks.
+In the front-end, apart from the usual React dependencies (React and React-DOM), I only added React-Router-DOM to ease user navigation. For tomorrow's deployments I injected an environment variable to the build script, with the purpose of changing from "browserRouter" to "hashRouter" and give the chance to the users of adding specific dynamic views to their bookmarks. For testing I have chosen VITEST, because it is fast, its syntax is easy to understand if you have worked with Jest or Mocha before, and mainly, because of its UI, that helps to debug and more.
 
 In the back-end, I included the following dependencies: cors, dotenv and express. As well as, morgan and nodemon as devDependencies with the goal of easing the development process.
 
@@ -38,6 +38,16 @@ The environment files are missed on purpose for security reasons and to be compl
   *Build*
   ~~~
     npm run build
+  ~~~
+
+  *Test*
+  ~~~
+    testui
+  ~~~
+
+   npm test
+  ~~~
+    npm run testui
   ~~~
 
 ### Main Scripts-Server:

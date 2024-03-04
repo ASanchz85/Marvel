@@ -2,7 +2,10 @@ import './carouselCard.css'
 
 function CarouselCard ({ title, date, thumbnail }) {
   return (
-    <div className='carousel__item'>
+    <div
+      className='carousel__item'
+      role='listitem'
+    >
       <img
         className='carousel__item--img'
         src={`${thumbnail.path}.${thumbnail.extension}`}

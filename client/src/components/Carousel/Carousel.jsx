@@ -12,6 +12,7 @@ function Carousel ({ comics }) {
       <div
         ref={carouselRef}
         className='carousel'
+        role='list'
       >
         {comics
           ?.sort((a, b) => a.date.localeCompare(b.date))
