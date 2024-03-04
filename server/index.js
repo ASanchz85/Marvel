@@ -5,7 +5,7 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-const app = express()
+export const app = express()
 const PORT = process.env.PORT || 4000
 
 app.use(morgan('dev'))
