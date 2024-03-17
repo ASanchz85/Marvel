@@ -4,7 +4,7 @@ This is the result of a technical challenge application made by Antonio Sanchez 
 
 The project has been developed using ReactJS with Vite and pure CSS for styling each component and page, following a Figma design.
 
-In terms of architectural and structural approach, I tend to use "component-based developmen", as this pattern emphasizes building software systems by breaking them down into smaller, reusable components, each responsible for a specific part of the user interface or functionality. I believe, it fits and represents better the use of frameworks like React.
+In terms of architectural and structural approach, I tend to use "component-based development", as this pattern emphasizes building software systems by breaking them down into smaller, reusable components, each responsible for a specific part of the user interface or functionality. I believe, it fits and represents better the use of frameworks like React.
 
 All the project in both sides, client and server, includes "standard" rules for linter and prettier as formatter. Using VSCode as IDE.
 
